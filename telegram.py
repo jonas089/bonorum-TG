@@ -8,5 +8,4 @@ class TeleClient:
     def send_message(self, message):
         url = '{base_url}chat_id={channel_id}&text={message}'.format(base_url=self.url, channel_id=self.channel_id, message=message)
         res = requests.get(url).text
-        print("URL: ", url)
         return res
